@@ -39,6 +39,12 @@ ApplicationWindow {
             Loader {
                 source: "UserProfilePage.qml"
             }
+
+        Component {
+            id: cardPage
+            Loader {
+                source: "qml/ProductCardPage.qml"
+            }
         }
     }
 }
