@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.15
 Page {
     title: "Регистрация"
     background: Rectangle {
-        color: "#161616"
+        color: "#1C1C1C"
     }
 
     header: Frame {
