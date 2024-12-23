@@ -6,7 +6,7 @@ Page {
     id: loginPage
     title: "Вход"
     background: Rectangle {
-        color: "#161616"
+        color: "#1C1C1C"
     }
 
     header: Frame {
@@ -106,7 +106,7 @@ Page {
             }
             onClicked: {
                 if (loginField.text !== "" && passwordField.text !== "") {
-                    stackView.push("UserProfilePage.qml");  // Переход на UserProfilePage
+                    stackView.push("UserProfilePage.qml");
                 } else {
                     console.log("Введите логин и пароль");
                 }
