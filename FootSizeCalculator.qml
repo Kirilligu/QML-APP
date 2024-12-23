@@ -29,7 +29,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в каталог");
                     menuDrawer.close();
-                    stackView.push(catalogPage); // Переход в каталог
+                    stackView.push(catalogPage);
                 }
             }
 
@@ -40,7 +40,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в калькулятор");
                     menuDrawer.close();
-                    stackView.push(footSizeCalculatorPage); // Переход в калькулятор
+                    stackView.push(footSizeCalculatorPage);
                 }
             }
 
@@ -51,7 +51,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в корзину");
                     menuDrawer.close();
-                    stackView.push(cartPage); // Переход в каталог
+                    stackView.push(cartPage);
                 }
             }
 
@@ -73,7 +73,7 @@ Page {
                 onClicked: {
                     console.log("Выход из аккаунта");
                     menuDrawer.close();
-                    stackView.push(loginPage); // Возврат на страницу логина
+                    stackView.push(loginPage);
                 }
             }
         }
@@ -83,7 +83,7 @@ Page {
         width: parent.width
         height: 60
 
-        // Кнопка бургер-меню
+
         ToolButton {
             id: burgerMenuButton
             text: "☰"
@@ -92,9 +92,9 @@ Page {
             anchors.left: parent.left
             onClicked: {
                 if (menuDrawer.opened) {
-                    menuDrawer.close(); // Закрыть меню, если оно открыто
+                    menuDrawer.close();
                 } else {
-                    menuDrawer.open(); // Открыть меню, если оно закрыто
+                    menuDrawer.open();
                 }
             }
         }
@@ -236,7 +236,7 @@ Page {
                 width: parent.width
             }
 
-            // Кнопка рассчитать
+
             Button {
                 text: "Рассчитать размер"
                 background: Rectangle {
