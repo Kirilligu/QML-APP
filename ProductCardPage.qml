@@ -6,13 +6,13 @@ Page {
     id: productCardPage
     property var productData: ({})
 
-    // Выдвижное меню (Drawer)
+
     Drawer {
         id: menuDrawer
         width: parent.width * 0.75
         height: parent.height
         background: Rectangle {
-            color: "#333333"
+            color: "#1C1C1C"
         }
 
         ColumnLayout {
@@ -25,7 +25,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в каталог");
                     menuDrawer.close();
-                    stackView.push(catalogPage); // Переход в каталог
+                    stackView.push(catalogPage);
                 }
             }
 
@@ -36,7 +36,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в калькулятор");
                     menuDrawer.close();
-                    stackView.push(footSizeCalculatorPage); // Переход в калькулятор
+                    stackView.push(footSizeCalculatorPage);
                 }
             }
 
@@ -47,7 +47,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в корзину");
                     menuDrawer.close();
-                    stackView.push(cartPage); // Переход в каталог
+                    stackView.push(cartPage);
                 }
             }
 
@@ -69,18 +69,18 @@ Page {
                 onClicked: {
                     console.log("Выход из аккаунта");
                     menuDrawer.close();
-                    stackView.push(loginPage); // Возврат на страницу логина
+                    stackView.push(loginPage);
                 }
             }
         }
     }
 
-    // Заголовок с кнопкой бургер-меню
+
     header: Frame {
         width: parent.width
         height: 60
         background: Rectangle {
-            color: "#000000" // Черный цвет фона
+            color: "#1C1C1C"
         }
 
         ToolButton {
@@ -91,9 +91,9 @@ Page {
             anchors.left: parent.left
             onClicked: {
                 if (menuDrawer.opened) {
-                    menuDrawer.close(); // Закрыть меню, если оно открыто
+                    menuDrawer.close();
                 } else {
-                    menuDrawer.open(); // Открыть меню, если оно закрыто
+                    menuDrawer.open();
                 }
             }
         }
@@ -121,7 +121,7 @@ Page {
     }
 
     background: Rectangle {
-        color: "#000000"
+        color: "#1C1C1C"
     }
 
     ColumnLayout {
