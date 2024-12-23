@@ -33,12 +33,25 @@ Page {
             }
 
             Button {
+                text: "Калькулятор размера"
+                font.pixelSize: 18
+                Layout.fillWidth: true
+                onClicked: {
+                    console.log("Перейти в калькулятор");
+                    menuDrawer.close();
+                    stackView.push(footSizeCalculatorPage); // Переход в каталог
+                }
+            }
+
+
+            Button {
                 text: "Корзина"
                 font.pixelSize: 18
                 Layout.fillWidth: true
                 onClicked: {
                     console.log("Перейти в корзину");
                     menuDrawer.close();
+                    stackView.push(cartPage); // Переход в каталог
                 }
             }
 
@@ -48,7 +61,7 @@ Page {
                 Layout.fillWidth: true
                 onClicked: {
                     console.log("Переход в профиль");
-                    menuDrawer.close();
+                    menuDrawer.close(userProfilePage);
                 }
             }
 
