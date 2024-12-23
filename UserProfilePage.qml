@@ -4,12 +4,12 @@ import QtQuick.Layouts 1.15
 
 Page {
     id: userProfilePage
-    title: "Личный кабинет"
+
     background: Rectangle {
         color: "#1C1C1C"
     }
 
-    // Выдвижное меню
+
     Drawer {
         id: menuDrawer
         width: parent.width * 0.75
@@ -28,7 +28,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в каталог");
                     menuDrawer.close();
-                    stackView.push(catalogPage); // Переход в каталог
+                    stackView.push(catalogPage);
                 }
             }
 
@@ -39,7 +39,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в калькулятор");
                     menuDrawer.close();
-                    stackView.push(footSizeCalculatorPage); // Переход в каталог
+                    stackView.push(footSizeCalculatorPage);
                 }
             }
 
@@ -51,7 +51,7 @@ Page {
                 onClicked: {
                     console.log("Перейти в корзину");
                     menuDrawer.close();
-                    stackView.push(cartPage); // Переход в каталог
+                    stackView.push(cartPage);
                 }
             }
 
@@ -72,7 +72,7 @@ Page {
                 onClicked: {
                     console.log("Выход из аккаунта");
                     menuDrawer.close();
-                    stackView.pop(); // Возврат на страницу логина
+                    stackView.pop();
                 }
             }
         }
@@ -91,9 +91,9 @@ Page {
             anchors.left: parent.left
             onClicked: {
                 if (menuDrawer.opened) {
-                    menuDrawer.close(); // Закрыть меню, если оно открыто
+                    menuDrawer.close();
                 } else {
-                    menuDrawer.open(); // Открыть меню, если оно закрыто
+                    menuDrawer.open();
                 }
             }
         }
@@ -116,94 +116,123 @@ Page {
                 color: "#FFF6E8"
             }
 
-            Image {
-                source: "qrc:/images/avatar.png"
-                width: 50
-                height: 50
-                clip: true // Чтобы сделать изображение круглым
-            }
+
         }
     }
 
-    property var userData: {}
-
     ColumnLayout {
-        anchors.centerIn: parent
+        anchors.fill: parent
         spacing: 20
+        anchors.margins: 16
 
-        Text {
-            text: "Никнейм: " + 'Обувной мастер'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
+
+        ColumnLayout {
+            spacing: 8
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Rectangle {
+                width: 120
+                height: 120
+                radius: 60
+                color: "#333333"
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                Image {
+                    source: "image/sasha.jpg"
+                    anchors.fill: parent
+
+                }
+            }
+
+            Text {
+                text: "Александро"
+                font.pixelSize: 20
+                color: "#FFF6E8"
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Text {
+                text: "20 лет"
+                font.pixelSize: 16
+                color: "#888888"
+                horizontalAlignment: Text.AlignHCenter
+            }
+        }
+
+        ColumnLayout {
+            spacing: 10
+
+            Text {
+                text: "Личная информация:"
+                font.pixelSize: 18
+                color: "#FFF6E8"
+            }
+
+            RowLayout {
+                spacing: 8
+
+                Text {
+                    text: "Имя:"
+                    font.pixelSize: 16
+                    color: "#FFF6E8"
+                }
+
+                Text {
+                    text: "Александр "
+                    font.pixelSize: 16
+                    color: "#FFF6E8"
+                }
+
+            }
+
+            Text {
+                text: "Email: example@mail.ru"
+                font.pixelSize: 16
+                color: "#FFF6E8"
+            }
+
+            Text {
+                text: "Телефон: 898091234567"
+                font.pixelSize: 16
+                color: "#FFF6E8"
+            }
+
+            Text {
+                text: "Адрес доставки: ул. Лермонтова, д 126"
+                font.pixelSize: 16
+                color: "#FFF6E8"
+            }
+        }
+
+        RowLayout {
+            spacing: 8
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Text {
+                text: "Мои размеры:"
+                font.pixelSize: 18
+                color: "#FFF6E8"
+            }
+
+
         }
 
         Text {
-            text: "Имя: " + 'Валодя'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
+            text: "Размер обуви: 44"
+            font.pixelSize: 16
+            color: "#FFF6E8"
         }
 
-        Text {
-            text: "Возраст: " + '27'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
-        }
-
-        Text {
-            text: "Электронная почта: " + 'aboba@mail.biba'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
-        }
-
-        Text {
-            text: "Телефон: " + '88005553535'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
-        }
-
-        Text {
-            text: "Адрес доставки: " + 'Иркутск, Лермонтова 128'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
-        }
-
-        Text {
-            text: "Размер обуви: " + '43'
-            color: "white"
-            font.pixelSize: 18
-            Layout.fillWidth: true
-        }
 
         Button {
             text: "Выйти из аккаунта"
+            font.pixelSize: 16
             background: Rectangle {
                 color: "#F65E49"
-                radius: 20 // Применяем радиус к фону кнопки
+                radius: 8
             }
-            font.pixelSize: 16
             Layout.fillWidth: true
-            onClicked: {
-                stackView.pop(); // Возврат на страницу входа
-            }
-        }
-    }
-
-    Component.onCompleted: {
-        console.log("User data received: ", userData);
-    }
-
-    // Импортируем компонент страницы каталога
-    Component {
-        id: catalogPage
-        // Путь к файлу каталога
-        Loader {
-            source: "CatalogPage.qml"
+            onClicked: console.log("Выход из аккаунта")
         }
     }
 }
