@@ -19,3 +19,23 @@
 ========
 ![image](https://github.com/user-attachments/assets/d35d7064-6a33-4a27-a3da-8dc52f36d2df)
 ----------
+Каталог
+=======
+![image](https://github.com/user-attachments/assets/dd328aff-660d-4030-bcb9-d44d1a949c8c)
+---------
+Карточка товара
+=========
+![image](https://github.com/user-attachments/assets/9aa7212e-6445-4e9e-82be-2eb08708bf67)
+----------
+Корзина товара
+========
+![image](https://github.com/user-attachments/assets/8df938b9-e589-4a7b-86d1-b845843bc085)
+--------
+Калькулятор 
+=======
+![image](https://github.com/user-attachments/assets/587c32b0-0178-4fdc-b856-1f99c6eef524)
+----------
+
+
+
+
