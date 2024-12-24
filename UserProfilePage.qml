@@ -82,7 +82,6 @@ Page {
         width: parent.width
         height: 60
 
-        // Кнопка бургер-меню
         ToolButton {
             id: burgerMenuButton
             text: "☰"
