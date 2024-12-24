@@ -10,7 +10,6 @@ Page {
         color: "#1C1C1C"
     }
 
-    // Выдвижное меню
     Drawer {
         id: menuDrawer
         width: parent.width * 0.75
@@ -129,7 +128,6 @@ Page {
             spacing: 12
             width: parent.width * 0.9
 
-            // Заголовки
             Text {
                 text: "Длина ступни (см)"
                 font.pixelSize: 16
