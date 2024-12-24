@@ -5,5 +5,17 @@
 -------------
 Экран регистрации пользователя
 ===========
-![image](https://github.com/user-attachments/assets/b75c2d02-5e93-47a9-9e52-6f187df00c06)
+![image](https://github.com/user-attachments/assets/e0dd0918-3f43-4d91-8bee-41c007c5316c)
+----------
+Экран сброса пароля
+=========
+![image](https://github.com/user-attachments/assets/95ba78fb-4ffc-421d-9fa2-14a04011cac0)
+-------------------
+Экран личного профиля
+========
+![image](https://github.com/user-attachments/assets/eea4792e-aaf2-44e3-b1b8-268848d5d992)
+---------
+Бургер-меню
+========
+![image](https://github.com/user-attachments/assets/d35d7064-6a33-4a27-a3da-8dc52f36d2df)
 ----------
