@@ -6,7 +6,6 @@ Page {
     id: productCardPage
     property var productData: ({})
 
-
     Drawer {
         id: menuDrawer
         width: parent.width * 0.75
@@ -75,7 +74,6 @@ Page {
         }
     }
 
-
     header: Frame {
         width: parent.width
         height: 60
@@ -115,9 +113,7 @@ Page {
                 font.pixelSize: 24
                 color: "#FFF6E8"
             }
-
         }
-
     }
 
     background: Rectangle {
@@ -131,23 +127,32 @@ Page {
         Text {
             text: productData.name || "Nike Air Max"
             font.pixelSize: 24
-            color: "#FFF6E8"
+            color: "#1C1C1C"
             horizontalAlignment: Text.AlignHCenter
             Layout.alignment: Qt.AlignHCenter
         }
 
-        Image {
-            source: productData.image || "qrc:/images/default-shoes.png"
-            fillMode: Image.PreserveAspectFit
+        Rectangle {
             width: parent.width * 0.8
             height: parent.width * 0.5
+            color: "#333333"
+            radius: 10
+            border.color: "#F65E49"
+            border.width: 2
             Layout.alignment: Qt.AlignHCenter
+
+            Image {
+                source: productData.image || "image/nike.jpg"
+                fillMode: Image.PreserveAspectFit
+                anchors.fill: parent
+                anchors.margins: -100
+            }
         }
 
         Text {
             text: "Цена: " + (productData.price || "7999") + " руб."
             font.pixelSize: 20
-            color: "#FFF6E8"
+            color: "#1C1C1C"
             horizontalAlignment: Text.AlignHCenter
             Layout.alignment: Qt.AlignHCenter
         }
@@ -157,7 +162,7 @@ Page {
             Layout.alignment: Qt.AlignHCenter
 
             Text {
-                text: "Цвет:"
+                text: "   Цвет:  "
                 font.pixelSize: 18
                 color: "#FFF6E8"
             }
@@ -173,7 +178,7 @@ Page {
             Layout.alignment: Qt.AlignHCenter
 
             Text {
-                text: "Размер:"
+                text: " Размер:"
                 font.pixelSize: 18
                 color: "#FFF6E8"
             }
